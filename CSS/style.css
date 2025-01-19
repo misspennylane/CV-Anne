@@ -1,0 +1,213 @@
+:root {
+    /* Color Palette from Original Stylesheet */
+    --primary-color: #8BA39C; /* Header background */
+    --secondary-color: #671D2F; /* Accent color */
+    --primary-dark: #384743;
+    --primary-light: #d4dddb;
+    --background-color: #e5e9f0;
+    --background-color-light: #f0f5f2;
+    --font-color-dark: #111827;
+    --font-color-light: #f9fafb;
+
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    /* Typography */
+    --primary-font: "Raleway", sans-serif;
+    --secondary-font: "Cormorant Garamond", serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #f1f4f3,#f9fbfa);
+    color: var(--font-color-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    box-shadow: var(--shadow-sm);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--gray-700);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.5rem;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--primary-dark);
+    margin: 4px 0;
+    position: relative;
+    transition: 0.3s ;
+}
+
+.hero {
+    padding: 8rem 0 4rem;
+    background: linear-gradient(to bottom right, #d4dddb, #f1f4f3);
+    margin-bottom: 10px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--secondary-color);
+}
+
+.hero-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--font-color-dark)
+}
+
+.contact-details {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--font-color-dark);
+}
+
+.contact-details i {
+    color: var(--secondary-color);
+}
+
+.contact-details a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* cards en sections */
+.card {
+    background-color: #f9fbfa;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+h3 {
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+    color: var(--font-color-dark);
+}
+
+/* Skills section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.skills-category {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.tags {
+    background: var(--background-color-light);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Timeline */
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 2rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--font-color-dark);
+}
