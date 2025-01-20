@@ -1,16 +1,30 @@
 :root {
-    /* Color Palette from Original Stylesheet */
-    --primary-color: #8BA39C; /* Header background */
-    --primary-light: #A8C1B8;
-    --secondary-color: #671D2F; /* Accent color */
+  /* Color system */
+  --primary-color: #8BA39C;
+  --primary-light: #c5d5cf;
+  --primary-dark: #3c4f49;
+  --secondary-color: #671D2F;
 
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-700: #374151;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+  /* Semantic Colors */
+  --text-primary: var(--gray-900);
+  --text-secondary: var(--gray-700);
+  --text-muted: var(--gray-500);
+  --background-primary: var(--gray-50);
+  --background-secondary: white;
 
+  /* Gray Scale */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* Green Scale */
   --green-25: #f9fbfa; /* Extra licht */
   --green-50: #f3f7f5;
   --green-100: #e3ebe8;
@@ -25,193 +39,230 @@
   --green-950: #1c2924; /* Donkerder */
   --green-975: #121b18; /* Extra donker */
 
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    /* Typography */
-    --primary-font: "Raleway", sans-serif;
-    --secondary-font: "Cormorant Garamond", serif;
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Typography */
+  --primary-font: "Raleway", sans-serif;
+  --secondary-font: "Cormorant Garamond", serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-base: all 0.2s ease;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-    font-family: "Raleway", sans-serif;
-    line-height: 1.6;
-    background: var(--green-25);
-    color: var(--green-800);
+  font-family: "Raleway", sans-serif;
+  line-height: 1.6;
+  color: var(--gray-800);
+  background: var(--gray-50);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
+/*Modern Nabvar */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--primary-color);
-    backdrop-filter: blur(8px);
-    z-index: 1000;
-    box-shadow: var(--shadow-sm);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary-color);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
 }
 
 .navbar h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
+
 .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
 }
 
 .nav-links a {
-    color: var(--gray-700);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+  color: var(--gray-700);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
+/* Mobile Menu Button*/
 .mobile-menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 0.5rem;
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.5rem;
 }
 
 .mobile-menu-btn span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--green-800);
-    margin: 4px 0;
-    position: relative;
-    transition: 0.3s ;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gray-800);
+  margin: 4px 0;
+  position: relative;
+  transition: 0.3s;
 }
 
+/* Hero Section */
 .hero {
-    padding: 8rem 0 4rem;
-    background: linear-gradient(to bottom right, #d4dddb, #f1f4f3);
-    margin-bottom: 10px;
+  padding: 8rem 0 4rem;
+  background: linear-gradient(to bottom right, #d4dddb, #f1f4f3);
+  margin-bottom: 10px;
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .profile-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--secondary-color);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--secondary-color);
 }
 
 .hero-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--green-900)
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900)
 }
 
 .contact-details {
-    display: grid;
-    gap: 0.75rem;
+  display: grid;
+  gap: 0.75rem;
 }
 
 .contact-details p {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--green-700);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-700);
 }
 
 .contact-details i {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
-.contact-details a{
-    color: var(--green-700);
-    text-decoration: none;
+.contact-details a {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 .contact-details a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
-/* cards en sections */
+/* Cards en Sections */
+
+.section {
+  padding: 4rem 0;
+}
+
 .card {
-    background-color: #f9fbfa;
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: var(--shadow);
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow);
 }
 
 h3 {
-    font-size: 1.875rem;
-    margin-bottom: 1.5rem;
-    color: var(--green-950);
+  font-size: 1.875rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
 }
 
 /* Timeline */
-
 .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .timeline-item {
-    position: relative;
-    padding: 2rem;
-    background: white;
-    border-radius: 1rem;
-    box-shadow: var(--shadow);
-    margin-bottom: 2rem;
+  position: relative;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
 }
 
 .timeline-content h4 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--green-950);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
 }
 
-.timeline-content .bedrijf {
-  color: var(--green-500);
+.timeline-content .company {
+  color: var(--primary-color);
   font-weight: 500;
 }
 
-.timeline-content .periode {
-  color: var(--green-700);
+.timeline-content .period {
+  color: var(--gray-700);
+  font-size: 0.875rem;
 }
 
 /* Skills section */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .skills-category {
@@ -228,8 +279,8 @@ h3 {
 }
 
 .tag {
-  background: var(--green-100);
-  color: var(--green-700);
+  background: var(--green-50);
+  color: var(--green-800);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   font-size: 0.875rem;
@@ -251,40 +302,213 @@ h3 {
 
 .education-category h4 {
   font-size: 1.5rem;
-  color: var(--green-950);
+  color: var(--gray-900);
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--primary-light);
 }
-/*Courses Grid*/
-.courses-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 1.5rem;
+
+.education .timeline-item {
+  border-left: 3px solid var(--primary-light);
+  margin-left: 1rem;
+  padding-left: 2rem;
 }
 
-.courses-card {
-  background: var(--green-25);
+.education .timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -0.5rem;
+  top: 1.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: var(--primary-light);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.achievement {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: var(--green-100);
+  color: var(--gray-700);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+/*Courses Grid*/
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card {
+  background: var(--green-50);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.courses-card:hover {
+.course-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .course-content h5 {
   font-size: 1.125rem;
-  color: var(--green-950);
+  color: var(--gray-900);
   margin-bottom: 0.5rem;
 }
 
 .course-content .institution {
-  color: var(--green-700);
+  color: var(--gray-700);
   font-weight: 500;
   margin-bottom: 0.25rem;
 }
 
+.course-content .period {
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--primary-light);
+}
+
+.status.completed {
+  background-color: rgba(84, 193, 33, 0.26);
+}
+
+/* Hobbies Section */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.hobby-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md)
+}
+
+.hobby-card i {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.hobby-card h4 {
+  color: var(--gray-900);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.hobby-card p {
+  color: var(--gray-700);
+  font-size: 0.925rem;
+  line-height: 1.5;
+}
+
+/* Back to top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--primary-color);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.back-to-top:hover {
+  opacity: 0.8;
+  background: var(--primary-dark);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-details {
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+
+  .education-grid {
+    gap: 2rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-category {
+    padding: 1.5rem;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby-card {
+    padding: 1.5rem;
+  }
+}
 
