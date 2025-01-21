@@ -29,7 +29,9 @@
 
 <header class="navbar">
   <div class="container">
-    <h1>Anne Kreischer</h1>
+    <div class="logo">
+      <h1>Anne Kreischer</h1>
+    </div>
     <nav>
       <button class="mobile-menu-btn">
         <span></span>
@@ -37,8 +39,10 @@
         <span></span>
       </button>
       <ul class="nav-links">
+        <li><a href="#About">Wie ben ik?</a></li>
         <li><a href="#experience">Werkervaring</a></li>
         <li><a href="#education">Opleidingen</a></li>
+        <li><a href="#Courses">Cursussen</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#hobbies">Hobby's</a></li>
       </ul>
@@ -66,10 +70,10 @@
 </section>
 
 
-<section class="about">
+<section id="About" class="section">
   <div class="container">
     <div class="card">
-      <h3>Wie ben ik? </h3>
+      <h3 class="section-title">Wie ben ik? </h3>
       <p>
         Een junior frontend developer met de focus op HTML, SCSS, JavaScript en TypeScript.
         Door te werken aan diverse projecten, zowel persoonlijke als voor o.a. Bee Ideas, wil ik een sterk portfolio
@@ -84,189 +88,73 @@
   </div>
 </section>
 
-<section id="experience" class="experience">
+<section id="experience" class="section">
   <div class="container">
-    <h3>Werkervaring</h3>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Frontend Developer</h4>
-          <p class="company">Bee Ideas</p>
-          <p class="period">2024-present</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Zelfstandig Hippisch Medewerker</h4>
-          <p class="company">Verschillende prive- en pensionstallen</p>
-          <p class="period">2024-present</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Diverse Zelfstandige Projecten ICT</h4>
-          <p class="company">Verschillende opdrachten/projecten</p>
-          <p class="period">2018-heden</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Leidinggevende horeca en evenementen</h4>
-          <p class="company">Sportschool Richard de Bijl & Chita Gross</p>
-          <p class="period">2014-2018</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Oproepkracht gehandicaptenzorg</h4>
-          <p class="company">Stichting Zuidwester</p>
-          <p class="period">2012-2014</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Oppas</h4>
-          <p class="company">Verschillende gezinnen </p>
-          <p class="period">2009-2011</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Receptionist</h4>
-          <p class="company">Physiomotion</p>
-          <p class="period">2009-2010</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Kassamedewerker</h4>
-          <p class="company">Albert Heijn</p>
-          <p class="period">2008-2009</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-content">
-          <h4>Verkoopassistent</h4>
-          <p class="company">Bart Smit Akkerhof</p>
-          <p class="period">2006-2007</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="education" class="education">
-  <div class="container">
-    <div class="education-grid">
-      <div class="education-category">
-        <h3>Opleidingen</h3>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>HBO Verpleegkunde</h4>
-              <p class="institution">Hogeschool Rotterdam</p>
-              <p class="period">2012-2013</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>MBO SPW-4 Woonbegeleiding</h4>
-              <p class="institution">Albeda College Rotterdam</p>
-              <p class="period">2008-2012</p>
-              <p class="achievement">Diploma behaald</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>VMBO-T</h4>
-              <p class="institution">C.S.G. Penta College Blaise Pascal</p>
-              <p class="period">2004-2008</p>
-              <p class="achievement">Diploma behaald</p>
-            </div>
+    <div class="card">
+      <h3 class="section-title">Werkervaring</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Frontend Developer</h4>
+            <p class="company">Bee Ideas</p>
+            <p class="period">2024-present</p>
           </div>
         </div>
-      </div>
-
-      <div class="education-category">
-        <h4>Cursussen en Certificaten</h4>
-        <div class="courses-grid">
-          <div class="course-card">
-            <div class="course-content">
-              <h5>Software Validatie</h5>
-              <p class="institution">Vista College</p>
-              <p class="period">2024 - Current</p>
-              <span class="status">In Progress</span>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="course-content">
-              <h5>Online Bootcamp IT</h5>
-              <p class="institution">Bee Ideas</p>
-              <p class="period">2023</p>
-              <span class="status completed">Completed</span>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="course-content">
-              <h5>SVH Sociale Hygiene</h5>
-              <p class="institution">MSH</p>
-              <p class="period">2017</p>
-              <span class="status completed">Completed</span>
-            </div>
-          </div>
-          <div class="course-card">
-            <div class="course-content">
-              <h5>EHBO Paarden</h5>
-              <p class="institution">KNHS</p>
-              <p class="period">2019</p>
-              <span class="status completed">Completed</span>
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Zelfstandig Hippisch Medewerker</h4>
+            <p class="company">Verschillende prive- en pensionstallen</p>
+            <p class="period">2024-present</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="skills" class="skills">
-  <div class="container">
-    <h3>Skills</h3>
-    <div class="skills-grid">
-      <div class="skills-category">
-        <h4>Technical Skills</h4>
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Angular</span>
-          <span class="tag">Git</span>
-          <span class="tag">GitHub</span>
-          <span class="tag">Figma</span>
-          <span class="tag">Microsoft Office</span>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Diverse Zelfstandige Projecten ICT</h4>
+            <p class="company">Verschillende opdrachten/projecten</p>
+            <p class="period">2018-heden</p>
+          </div>
         </div>
-      </div>
-      <div class="skills-category">
-        <h4>Hard Skills</h4>
-        <div class="tags">
-          <span class="tag">Scrum/agile</span>
-          <span class="tag">Klantgerichtheid</span>
-          <span class="tag">Multitasking</span>
-          <span class="tag">Tijdmanagement</span>
-          <span class="tag">Zelfstandig werken</span>
-          <span class="tag">Kritische denken</span>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Leidinggevende horeca en evenementen</h4>
+            <p class="company">Sportschool Richard de Bijl & Chita Gross</p>
+            <p class="period">2014-2018</p>
+          </div>
         </div>
-      </div>
-      <div class="skills-category">
-        <h4>Soft Skills</h4>
-        <div class="tags">
-          <span class="tag">Teamplayer</span>
-          <span class="tag">Verantwoordelijk</span>
-          <span class="tag">Flexibel</span>
-          <span class="tag">Empathisch</span>
-          <span class="tag">Doelgericht</span>
-          <span class="tag">Doorzetter</span>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Oproepkracht gehandicaptenzorg</h4>
+            <p class="company">Stichting Zuidwester</p>
+            <p class="period">2012-2014</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Oppas</h4>
+            <p class="company">Verschillende gezinnen </p>
+            <p class="period">2009-2011</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Receptionist</h4>
+            <p class="company">Physiomotion</p>
+            <p class="period">2009-2010</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Kassamedewerker</h4>
+            <p class="company">Albert Heijn</p>
+            <p class="period">2008-2009</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>Verkoopassistent</h4>
+            <p class="company">Bart Smit Akkerhof</p>
+            <p class="period">2006-2007</p>
+          </div>
         </div>
       </div>
     </div>
@@ -274,39 +162,162 @@
 
 </section>
 
-
-<section id="hobbies" class="hobbies">
+<section id="education" class="section">
   <div class="container">
-    <h3>Hobbies</h3>
-    <div class="hobbies-grid">
-      <div class="hobby-card">
-        <i class="fas fa-code"></i>
-        <h4>Programmeren</h4>
-        <p>Ik geniet van programmeren en het ontwikkelen van creatieve en technische oplossingen.</p>
-      </div>
+    <div class="card">
+      <h3 class="section-title">Opleidingen</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>HBO Verpleegkunde</h4>
+            <p class="institution">Hogeschool Rotterdam</p>
+            <p class="period">2012-2013</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>MBO SPW-4 Woonbegeleiding</h4>
+            <p class="institution">Albeda College Rotterdam</p>
+            <p class="period">2008-2012</p>
 
-      <div class="hobby-card">
-        <i class="fas fa-gamepad"></i>
-        <h4>Gaming</h4>
-        <p>In mijn vrije tijd game ik om te ontspannen.</p>
-      </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h4>VMBO-T</h4>
+            <p class="institution">C.S.G. Penta College Blaise Pascal</p>
+            <p class="period">2004-2008</p>
 
-      <div class="hobby-card">
-        <i class="fas fa-horse"></i>
-        <h4>Paardrijden</h4>
-        <p>Ik rijd paard om te ontspannen en actief bezig te zijn.</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+<section id="Courses" class="section">
+  <div class="container">
+    <div class="card">
+      <h3 class="section-title">Cursussen en Certificaten</h3>
+      <div class="courses-grid">
+        <div class="course-card">
+          <div class="course-content">
+            <h5>Software Validatie</h5>
+            <p class="institution">Vista College</p>
+            <p class="period">2024 - Current</p>
 
-      <div class="hobby-card">
-        <i class="fas fa-book-reader"></i>
-        <h4>Lezen</h4>
-        <p>Ik lees om mezelf te blijven ontwikkelen.</p>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-content">
+            <h5>Online Bootcamp IT</h5>
+            <p class="institution">Bee Ideas</p>
+            <p class="period">2023</p>
+
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-content">
+            <h5>SVH Sociale Hygiene</h5>
+            <p class="institution">MSH</p>
+            <p class="period">2017</p>
+
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-content">
+            <h5>EHBO Paarden</h5>
+            <p class="institution">KNHS</p>
+            <p class="period">2019</p>
+
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="hobby-card">
-        <i class="fas fa-paw"></i>
-        <h4>Wandelen</h4>
-        <p>Ik maak graag wandelingen met mijn hond, waarbij ik geniet van de natuur en beweging.</p>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="card">
+      <h3 class="section-title">Skills</h3>
+      <div class="skills-grid">
+        <div class="skills-category">
+          <h4>Technical Skills</h4>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Angular</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Microsoft Office</span>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h4>Hard Skills</h4>
+          <div class="tags">
+            <span class="tag">Scrum/agile</span>
+            <span class="tag">Klantgerichtheid</span>
+            <span class="tag">Multitasking</span>
+            <span class="tag">Tijdmanagement</span>
+            <span class="tag">Zelfstandig werken</span>
+            <span class="tag">Kritische denken</span>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h4>Soft Skills</h4>
+          <div class="tags">
+            <span class="tag">Teamplayer</span>
+            <span class="tag">Verantwoordelijk</span>
+            <span class="tag">Flexibel</span>
+            <span class="tag">Empathisch</span>
+            <span class="tag">Doelgericht</span>
+            <span class="tag">Doorzetter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="hobbies" class="section">
+  <div class="container">
+    <div class="card">
+      <h3 class="section-title">Hobbies</h3>
+      <div class="hobbies-grid">
+        <div class="hobby-card">
+          <i class="fas fa-code"></i>
+          <h4>Programmeren</h4>
+          <p>Ik geniet van programmeren en het ontwikkelen van creatieve en technische oplossingen.</p>
+        </div>
+
+        <div class="hobby-card">
+          <i class="fas fa-gamepad"></i>
+          <h4>Gaming</h4>
+          <p>In mijn vrije tijd game ik om te ontspannen.</p>
+        </div>
+
+        <div class="hobby-card">
+          <i class="fas fa-horse"></i>
+          <h4>Paardrijden</h4>
+          <p>Ik rijd paard om te ontspannen en actief bezig te zijn.</p>
+        </div>
+
+        <div class="hobby-card">
+          <i class="fas fa-book-reader"></i>
+          <h4>Lezen</h4>
+          <p>Ik lees om mezelf te blijven ontwikkelen.</p>
+        </div>
+
+        <div class="hobby-card">
+          <i class="fas fa-paw"></i>
+          <h4>Wandelen</h4>
+          <p>Ik maak graag wandelingen met mijn hond, waarbij ik geniet van de natuur en beweging.</p>
+        </div>
       </div>
     </div>
   </div>
