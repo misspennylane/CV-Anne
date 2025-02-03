@@ -218,7 +218,7 @@ body {
   color: var(--secondary-color);
 }
 
-.contact-details a {
+.contact-details .email {
   color: var(--primary-dark);
   text-decoration: none;
 }
@@ -227,6 +227,14 @@ body {
   color: var(--secondary-color);
   text-decoration: underline;
 }
+
+.contact-details a {
+  color: var(--secondary-color);
+}
+ .contact-details .downloadcv {
+   color: var(--primary-dark);
+   text-decoration: none;
+ }
 
 /* Cards en Sections */
 

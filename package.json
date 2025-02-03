@@ -16,5 +16,9 @@
   "dependencies": {
     "copy-webpack-plugin": "^12.0.2",
     "webpack-merge": "^6.0.1"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "cypress": "^14.0.1"
   }
 }
