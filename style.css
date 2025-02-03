@@ -409,15 +409,15 @@ h3 {
 }
 
 /* Contact Form */
-#contact-form {
+.contact-form {
   max-width: 600px;
   margin: 0 auto;
   display: grid;
   gap: var(--spacing-md);
 }
 
-#contact-form input,
-#contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: var(--spacing-md);
   border: 1px solid rgba(0,0,0,0.1);
@@ -426,8 +426,8 @@ h3 {
   transition: var(--transition-smooth);
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
+.contact-form input:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: var(--secondary-color);
   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
