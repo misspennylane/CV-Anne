@@ -1,3 +1,29 @@
+document.getElementById('contact-form').onsubmit = function(event) {
+  event.preventDefault(); // Voorkom dat het formulier normaal verzendt
+
+  // Formuliergegevens verzamelen
+  const formData = new FormData(event.target);
+
+  // Formulieren verzenden
+  fetch(event.target.action, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      alert('Bedankt voor je bericht!');
+      event.target.reset(); // Formulier resetten
+    } else {
+      alert('Er ging iets mis, probeer het opnieuw.');
+    }
+  }).catch(error => {
+    alert('Er ging iets mis, probeer het opnieuw.');
+  });
+};
+
+
 // Mobile Menu Configuration
 class MobileMenu {
   constructor() {
